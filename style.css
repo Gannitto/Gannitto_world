@@ -1,0 +1,160 @@
+﻿/* Основные стили */
+body {
+    background-color: #1e1e1e;
+    color: #ffffff;
+    font-family: 'Press Start 2P', cursive;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+/* Шапка */
+header {
+    background-color: #333333;
+    padding: 20px;
+    border-bottom: 4px solid #00aa00;
+}
+
+    header img {
+        width: 500px;
+        height: auto;
+        margin-bottom: 10px;
+    }
+
+.project-name {
+    font-size: 20px;
+    margin-top: -10px;
+    color: #00aa00;
+}
+
+/* Контейнер для контента */
+.content {
+    margin: 40px;
+    padding: 20px;
+    background-color: #2b2b2b;
+    border-radius: 10px;
+    border: 4px solid #00aa00;
+}
+
+    .content h1 {
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+
+    .content p {
+        font-size: 16px;
+        line-height: 1.6;
+    }
+
+/* Кнопка скачивания/просмотра */
+.download-button {
+    display: inline-block;
+    background-color: #00aa00;
+    color: #333333;
+    padding: 10px 20px;
+    margin-top: 20px;
+    font-size: 16px;
+    text-decoration: none;
+    border-radius: 8px;
+    border: 4px solid #ffffff;
+    box-shadow: 0 4px #333333;
+}
+
+    .download-button:hover {
+        background-color: #ff9900;
+    }
+
+/* Подвал */
+footer {
+    background-color: #333333;
+    padding: 10px;
+    border-top: 4px solid #00aa00;
+    margin-top: 40px;
+}
+
+    footer p {
+        font-size: 14px;
+        margin: 5px;
+    }
+
+/* Стили для страницы с проектами */
+.projects-container {
+    display: flex;
+    justify-content: center;
+    margin: 40px;
+    padding: 20px;
+    background-color: #2b2b2b;
+    border-radius: 10px;
+    border: 4px solid #00aa00;
+}
+
+.projects-list {
+    flex: 1;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    text-align: left;
+    border-right: 2px solid #00aa00;
+}
+
+    .projects-list li {
+        padding: 10px;
+        margin: 10px 0;
+        cursor: pointer;
+        background-color: #444444;
+        border-radius: 8px;
+        transition: background-color 0.3s;
+    }
+
+        .projects-list li:hover {
+            background-color: #00aa00;
+            color: #333333;
+        }
+
+.project-details {
+    flex: 2;
+    padding-left: 20px;
+    text-align: left;
+}
+
+    .project-details img {
+        width: 100%;
+        height: auto;
+        border-radius: 8px;
+        border: 4px solid #ffffff;
+        margin-bottom: 20px;
+    }
+
+/* Стилизация скроллбара для браузеров на основе WebKit (Chrome, Safari, Edge) */
+::-webkit-scrollbar {
+    width: 12px; /* Ширина скроллбара */
+    background-color: #2b2b2b; /* Фон скроллбара */
+}
+
+/* Ползунок внутри скроллбара */
+::-webkit-scrollbar-thumb {
+    background-color: #4caf50; /* Цвет ползунка */
+    border-radius: 6px; /* Закруглённые углы ползунка */
+    border: 2px solid #2b2b2b; /* Пробел вокруг ползунка */
+}
+
+    /* Ползунок при наведении */
+    ::-webkit-scrollbar-thumb:hover {
+        background-color: #388e3c; /* Более тёмный зелёный при наведении */
+    }
+
+/* Фон скроллбара при наведении */
+::-webkit-scrollbar-track {
+    background-color: #2b2b2b; /* Тёмно-серый фон трека */
+}
+
+/* Стилизация для Firefox */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: #4caf50 #2b2b2b; /* Цвет ползунка и фона скроллбара */
+}
+
+/* Ползунок для IE и Edge (старые версии) */
+body {
+    -ms-overflow-style: scrollbar; /* Отображение системного скроллбара */
+}

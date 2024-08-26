@@ -1,0 +1,69 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Gannitto world</title>
+	<link rel="icon" href="Images/Icon.png" type="image/x-icon">
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="style.css">
+	<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+</head>
+<body>
+	<header>
+		<!-- Логотип игры -->
+		<img src="Images/Логотип игры.png" alt="Логотип игры">
+	</header>
+
+	<div class="content">
+		<!-- Описание игры -->
+		<h1>Описание Игры</h1>
+		<p>Эта игра про выживание в мире, который пережил аппокалипсис. В нём от человечества осталось лишь несколько людей и всё. Исследуй мир и развивайся!</p>
+		<h1>Как скачать игру?</h1>
+		<p>1. Нажми на кнопку "Скачать игру"</p>
+		<p>2. Разархивируй zip-архив в папку с программами.</p>
+		<p>3. Открой Gannitto world.exe и сделай к нему ярлык на рабочем столе для удобного открытия в будущем</p>
+
+		<!-- Кнопка для скачивания -->
+		<a href="https://p-def8.pcloud.com/cBZAjuqDAZ56lMocZZZsuSMkkZ2ZZjnXZkZEUxUVZh4ZNRZzFZO4ZDRZ44Zf8ZuzZHLZB4ZMLZ6FZDHZWzZOsAtVZGj2nQlU1YU0jWH3vxHwwwYlP18hy/Gannitto%20world.zip" class="download-button">Скачать игру</a>
+	</div>
+	<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+
+	<h1>Другие мои проекты</h1>
+	<script>
+		function showProjectDetails(projectName, projectImage, projectDescription, projectLink) {
+			document.getElementById('project-image').src = projectImage;
+			document.getElementById('project-description').textContent = projectDescription;
+			document.getElementById('project-link').href = projectLink;
+		}
+	</script>
+
+		<div class="projects-container">
+			<!-- Список проектов -->
+			<ul class="projects-list">
+				<li onclick="showProjectDetails('Shwindows Danilduns', 'Images/Shwindows.png', 'Это пародия на Windows, сделанная в Power Point. Полное название: Shwindows Danilduns 14 pro max +++(- version) rus laun ghirt complex x-beta 1.0', 'проект1.html')">Shwindows Danilduns</li>
+				<li onclick="showProjectDetails('Auto-builder', 'Images/Auto-builder.png', 'Это бот для Multicraft, который может строить арты', 'проект2.html')">Auto-builder</li>
+				<!-- Добавьте больше проектов по необходимости -->
+			</ul>
+
+			<!-- Детали проекта -->
+			<div class="project-details">
+				<img id="project-image" src="Images/Shwindows.png" alt="'Shwindows Danilduns'">
+				<p id="project-description">Это пародия на Windows, сделанная в Power Point. Полное название: Shwindows Danilduns 14 pro max +++(- version) rus laun ghirt complex x-beta 1.0</p>
+				<a id="project-link" href="проект1.html" class="download-button">Подробнее</a>
+			</div>
+		</div>
+	<div class="content">
+		<h1>Как я делаю игру</h1>
+		<p>Я малоизвестный разработчик и делаю игру в основном один. Хоть у меня и есть сервер в Discord, там мне особо не помогают. Надеюсь, в будущем мой проект станет популярнее и найдутся люди, которые будут по-настоящему готовы мне помочь UwU</p>
+		<p>Язык программирования: Python, библиотека: pygame</p>
+	</div>
+			<footer>
+				<!-- Контактная информация -->
+				<p>Контактная информация:
+				Почта danilaserezhin@gmail.com
+				Telegram @Gannitto
+				</p>
+			</footer>
+	</body>
+</html>
