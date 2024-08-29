@@ -1,0 +1,4 @@
+User-agent: *
+Disallow:
+
+Sitemap: https://gannitto.github.io/Gannitto_world/sitemap.xml
