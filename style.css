@@ -141,7 +141,7 @@ footer {
 
 /* Ползунок внутри скроллбара */
 ::-webkit-scrollbar-thumb {
-	background-color: #4caf50; /* Цвет ползунка */
+	background-color: #00aa00; /* Цвет ползунка */
 	border-radius: 6px; /* Закруглённые углы ползунка */
 	border: 2px solid #2b2b2b; /* Пробел вокруг ползунка */
 }
@@ -159,7 +159,7 @@ footer {
 /* Стилизация для Firefox */
 * {
 	scrollbar-width: thin;
-	scrollbar-color: #4caf50 #2b2b2b; /* Цвет ползунка и фона скроллбара */
+	scrollbar-color: #00aa00 #2b2b2b; /* Цвет ползунка и фона скроллбара */
 }
 
 /* Ползунок для IE и Edge (старые версии) */
