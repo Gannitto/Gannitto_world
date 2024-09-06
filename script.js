@@ -6,7 +6,7 @@
 	const password = document.getElementById('password').value;
 
 	// Пример отправки данных на сервер
-	fetch('https://gannitto.github.io/Gannitto_world/register', {
+	fetch('https://gannitto.github.io/Gannitto_world/registration', {
 		method: 'POST',
 		headers: {
 			'Content-Type': 'application/json'
