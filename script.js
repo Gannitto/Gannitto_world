@@ -24,6 +24,10 @@
 
 
 
+import { initializeApp } from 'firebase/app';
+import { getAuth, createUserWithEmailAndPassword } from 'firebase/auth';
+import { getFirestore, doc, setDoc } from 'firebase/firestore';
+
 const firebaseConfig = {
   apiKey: "AIzaSyCVxiskY4MROEj3A1Nsy_zJzCr4L0fITWA",
   authDomain: "gannitto-world-7dbe0.firebaseapp.com",
