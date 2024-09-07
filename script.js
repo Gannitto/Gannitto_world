@@ -79,3 +79,31 @@ registrationForm.addEventListener('submit', function (e) {
 			messageDiv.textContent = `Ошибка: ${errorMessage}`;
 		});
 });
+import { getFirestore, collection, getDocs } from 'firebase/firestore';
+
+// Инициализация Firebase
+
+const firebaseConfig = {
+	apiKey: "AIzaSyCVxiskY4MROEj3A1Nsy_zJzCr4L0fITWA",
+	authDomain: "gannitto-world-7dbe0.firebaseapp.com",
+	projectId: "gannitto-world-7dbe0",
+	storageBucket: "gannitto-world-7dbe0.appspot.com",
+	messagingSenderId: "231799284383",
+	appId: "1:231799284383:web:17f6eda6dcc4f6329778aa",
+	measurementId: "G-HQ3W9DYEQ8"
+};
+
+// Инициализация Firebase
+const app = initializeApp(firebaseConfig);
+const db = getFirestore(app);
+
+// Функция для получения всех пользователей
+async function getAllUsers() {
+	const usersCollection = collection(db, 'users');
+	const userSnapshot = await getDocs(usersCollection);
+	const userList = userSnapshot.docs.map(doc => doc.data());
+	console.log('Список пользователей:', userList);
+}
+
+// Вызов функции
+getAllUsers();
