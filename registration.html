@@ -14,7 +14,7 @@
 <body>
 	<div class="registration-container">
 		<h1>Регистрация</h1>
-		<form id="registration-form">
+		<form id="registration-form" method="post" enctype="multipart/form-data">
 			<label for="username">Имя пользователя:</label>
 			<input type="text" id="username" name="username" required>
 
@@ -28,7 +28,7 @@
 		</form>
 		<div id="message"></div>
 	</div>
-
-	<script src="script.js"></script> <!-- Подключение вашего JS-кода -->
+	
+	<script src="script.js"></script>
 </body>
 </html>
