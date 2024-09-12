@@ -13,25 +13,23 @@
 
 <body>
 	<div class="registration-container">
-		<h1>Регистрация</h1>
-		<form id="registration-form" method="post" enctype="multipart/form-data">
+		<h1>Вход</h1>
+		<form id="login-form" method="post">
 			<label for="username">Имя пользователя:</label>
 			<input type="text" id="username" name="username" required>
-
-			<label for="email">Email:</label>
-			<input type="email" id="email" name="email" required>
 
 			<label for="password">Пароль:</label>
 			<input type="password" id="password" name="password" required>
 
-			<button type="submit">Зарегестрироваться</button>
+			<button type="submit">Войти</button>
 		</form>
+
 		<div id="message"></div>
-		<p><a href="login.html" style="color: green">Уже есть аккаунт? Войти</a></p>
+		<p><a href="registration.html" style="color: green">Ещё нет аккаунта? Зарегистрироваться</a></p>
 
 	</div>
 
-	<script src="script.js"></script>
+	<script src="login_script.js"></script>
 
 </body>
 </html>
