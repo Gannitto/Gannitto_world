@@ -31,7 +31,7 @@ document.getElementById('registration-form').addEventListener('submit', async fu
 	const password = document.getElementById('password').value
 
 	try {
-		const response = await fetch('http://localhost:5000/auth/registration', {
+		const response = await fetch('https://gannittoworld-production.up.railway.app/auth/registration', {
 			method: 'POST',
 			headers: {
 				'Content-Type': 'application/json',

@@ -13,7 +13,7 @@ app.use("/auth", authRouter)
 const start = async () => {
 	try {
 		await mongoose.connect(`mongodb+srv://Gannitto:Gannitto127@cluster0.7jlhe.mongodb.net/Gannitto+world+users?retryWrites=true&w=majority&appName=Cluster0`)
-		app.listen(PORT, () => console.log(`server started on port ${PORT} `))
+		app.listen(PORT, "0.0.0.0", () => console.log(`server started on port ${PORT} `))
 	} catch (e) {
 		console.log(e)
 	}
