@@ -16,6 +16,28 @@
 	<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
 </head>
 <body>
+	<!-- Верхняя панель-->
+	<div class="navbar">
+		<div class="left-links">
+			<a href="#" class="nav-link"><i class="fas fa-question-circle"></i> FAQ</a>
+			<a href="#" class="nav-link"><i class="fas fa-bug"></i> Доложить об ошибке</a>
+		</div>
+		<div class="right-links">
+			<a href="login.html" class="nav-link" id="login-link">Войти</a>
+			<a href="registration.html" class="nav-link" id="register-link">Регистрация</a>
+		</div>
+
+		<!-- Блок для авторизованного пользователя (по умолчанию скрыт) -->
+		<div class="user-info" id="user-info" style="display: none;">
+			<div class="user-avatar" id="user-avatar"></div>
+			<span id="user-name"></span>
+
+		</div>
+		</div>
+	<br>
+	<br>
+	<br>
+	<br>
 	<header>
 		<!-- Логотип игры -->
 		<a href="index.html"><img src="Images/Логотип игры.png" alt="Логотип игры"></a>
@@ -50,33 +72,35 @@
 		}
 	</script>
 
-		<div class="projects-container">
-			<!-- Список проектов -->
-			<ul class="projects-list">
-				<li onclick="showProjectDetails('Shwindows Danilduns', 'Images/Shwindows.png', 'Это пародия на Windows, сделанная в Power Point. Полное название: Shwindows Danilduns 14 pro max +++(- version) rus laun ghirt complex x-beta 1.0', 'Shwindows.html')">Shwindows Danilduns</li>
-				<li onclick="showProjectDetails('Auto-builder', 'Images/Auto-builder.png', 'Это бот для Multicraft, который может строить арты', 'Auto-builder.html')">Auto-builder</li>
-				<li onclick="showProjectDetails('Roskomnadzor_zapretil', 'Images/Roskomnadzor_zapretil.png', 'Это канал в Telegram, созданный мною и моим другом. Там выходят несуществующие шуточные запреты Роскомнадзора', 'Roskomnadzor_zapretil.html')">ТГК "Типичные запреты Роскомнадзора"</li>
-				<li onclick="showProjectDetails('Sheet-1488', 'Images/Sheet-1488.jpg', 'Это электро-щит в Калининграде, который я нашёл. Он имеет номер 1488, поэтому я по приколу добавил его на карты и назвал его в честь себя и друга.', 'Sheet-1488.html')">Электро-щит №1488 в честь Gannitto и FireSocks</li>
-			</ul>
+	<div class="projects-container">
+		<!-- Список проектов -->
+		<ul class="projects-list">
+			<li onclick="showProjectDetails('Shwindows Danilduns', 'Images/Shwindows.png', 'Это пародия на Windows, сделанная в Power Point. Полное название: Shwindows Danilduns 14 pro max +++(- version) rus laun ghirt complex x-beta 1.0', 'Shwindows.html')">Shwindows Danilduns</li>
+			<li onclick="showProjectDetails('Auto-builder', 'Images/Auto-builder.png', 'Это бот для Multicraft, который может строить арты', 'Auto-builder.html')">Auto-builder</li>
+			<li onclick="showProjectDetails('Roskomnadzor_zapretil', 'Images/Roskomnadzor_zapretil.png', 'Это канал в Telegram, созданный мною и моим другом. Там выходят несуществующие шуточные запреты Роскомнадзора', 'Roskomnadzor_zapretil.html')">ТГК "Типичные запреты Роскомнадзора"</li>
+			<li onclick="showProjectDetails('Sheet-1488', 'Images/Sheet-1488.jpg', 'Это электро-щит в Калининграде, который я нашёл. Он имеет номер 1488, поэтому я по приколу добавил его на карты и назвал его в честь себя и друга.', 'Sheet-1488.html')">Электро-щит №1488 в честь Gannitto и FireSocks</li>
+		</ul>
 
-			<!-- Детали проекта -->
-			<div class="project-details">
-				<img id="project-image" src="Images/Shwindows.png" alt="'Shwindows Danilduns'">
-				<p id="project-description">Это пародия на Windows, сделанная в Power Point. Полное название: Shwindows Danilduns 14 pro max +++(- version) rus laun ghirt complex x-beta 1.0</p>
-				<a id="project-link" href="Shwindows.html" class="download-button">Подробнее</a>
-			</div>
+		<!-- Детали проекта -->
+		<div class="project-details">
+			<img id="project-image" src="Images/Shwindows.png" alt="'Shwindows Danilduns'">
+			<p id="project-description">Это пародия на Windows, сделанная в Power Point. Полное название: Shwindows Danilduns 14 pro max +++(- version) rus laun ghirt complex x-beta 1.0</p>
+			<a id="project-link" href="Shwindows.html" class="download-button">Подробнее</a>
 		</div>
+	</div>
 	<div class="content">
 		<h1>Как я делаю игру</h1>
 		<p>Я малоизвестный разработчик и делаю игру в основном один. Хоть у меня и есть сервер в Discord, там мне особо не помогают. Надеюсь, в будущем мой проект станет популярнее и найдутся люди, которые будут по-настоящему готовы мне помочь UwU</p>
 		<p>Язык программирования: Python, библиотека: pygame</p>
 	</div>
-			<footer>
-				<!-- Контактная информация -->
-				<p>Контактная информация:
-				Почта danilaserezhin@gmail.com
-				Telegram <a href="https://t.me/Gannitto" style="color: #00aa00 ">@Gannitto</a>
-				</p>
-			</footer>
-	</body>
+	<footer>
+		<!-- Контактная информация -->
+		<p>
+			Контактная информация:
+			Почта danilaserezhin@gmail.com
+			Telegram <a href="https://t.me/Gannitto" style="color: #00aa00 ">@Gannitto</a>
+		</p>
+	</footer>
+	<script src="accounts.js"></script>
+</body>
 </html>

@@ -1,8 +1,8 @@
 ﻿document.getElementById('login-form').addEventListener('submit', async function (e) {
 	e.preventDefault(); // Предотвращаем перезагрузку страницы
 
-	const username = document.getElementById('username').value;
-	const password = document.getElementById('password').value;
+	const username = document.getElementById('username').value
+	const password = document.getElementById('password').value
 
 	try {
 		const response = await fetch('https://gannittoworld-production.up.railway.app/auth/login', {
@@ -17,20 +17,22 @@
 		});
 
 		if (!response.ok) {
-			throw new Error(`Ошибка: ${response.statusText}`);
+			throw new Error(`Ошибка: ${response.statusText}`)
 		}
 
 		const data = await response.json();
 
 		if (data.token) {
 			// Сохраняем токен в localStorage для дальнейших запросов
-			localStorage.setItem('token', data.token);
-			alert('Вход выполнен успешно!');
+			localStorage.setItem('token', data.token)
+			localStorage.setItem('username', username)
+			alert('Вход выполнен успешно!')
+			window.open("index.html")
 		} else {
-			alert('Ошибка входа. Неверные данные.');
+			alert('Ошибка входа. Неверные данные.')
 		}
 	} catch (error) {
-		console.error('Ошибка при входе:', error);
-		alert(`Ошибка: ${error.message}`);
+		console.error('Ошибка при входе:', error)
+		alert(`Ошибка: ${error.message}`)
 	}
 });
