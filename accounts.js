@@ -37,3 +37,7 @@ window.onload = function () {
         displayUserInfo(username);
     }
 };
+
+module.exports = {
+    isUserLoggedIn
+}
