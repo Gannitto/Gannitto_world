@@ -1,27 +1,27 @@
-const express = require("express")
-const bcrypt = require("bcryptjs")
-const User = require("./models/User")
-const nodemailer = require("nodemailer")
-const { isUserLoggedIn } = require("accounts")
+import { Router } from "express"
+import { compare, hash } from "bcryptjs"
+import { findById } from "./models/User"
+import { createTransport } from "nodemailer"
+import { isUserLoggedIn } from "accounts"
 
-const router = express.Router();
+const router = Router();
 
 // Маршрут для изменения профиля
 router.put("/profile/update", async (req, res) => {
 	const { userId, newUsername, oldPassword, newPassword, newAvatar } = req.body;
 
 	try {
-		const user = await User.findById(userId);
+		const user = await findById(userId);
 
 		// Если пользователь пытается изменить пароль, проверяем старый
 		if (newPassword && oldPassword) {
-			const validPassword = await bcrypt.compare(oldPassword, user.password);
+			const validPassword = await compare(oldPassword, user.password);
 			if (!validPassword) {
 				return res.status(400).json({ message: "Неверный старый пароль" });
 			}
 
 			// Хешируем новый пароль и обновляем его
-			const hashedPassword = await bcrypt.hash(newPassword, 12);
+			const hashedPassword = await hash(newPassword, 12);
 			user.password = hashedPassword;
 
 			// Отправляем предупреждающее письмо на почту
@@ -41,7 +41,7 @@ router.put("/profile/update", async (req, res) => {
 
 // Отправка предупреждающего письма при изменении пароля
 async function sendPasswordChangeEmail(email) {
-	const transporter = nodemailer.createTransport({
+	const transporter = createTransport({
 		service: "gmail",
 		auth: {
 			user: "danilaserezhin@gmail.com", // Ваш email
@@ -60,19 +60,19 @@ async function sendPasswordChangeEmail(email) {
 	await transporter.sendMail(mailOptions);
 }
 
-function displayUserInfo(username) {
-
-	document.getElementById('notLoggedInMessage').style.display = 'none';
-
-	document.getElementById('profile-update-form').style.display = 'flex';
-}
-
 // Проверка состояния авторизации при загрузке страницы
 window.onload = function () {
 	const username = isUserLoggedIn();
 	if (username) {
-		displayUserInfo(username);
+		document.getElementById('notLoggedInMessage').style.display = 'none';
+		document.getElementById('profile-update-form').style.display = 'flex';
+		console.log(12)
+	}
+	else {
+		document.getElementById('notLoggedInMessage').style.display = 'flex';
+		document.getElementById('profile-update-form').style.display = 'none';
+		console.log(34)
 	}
 };
 
-module.exports = router;
+export default router;
